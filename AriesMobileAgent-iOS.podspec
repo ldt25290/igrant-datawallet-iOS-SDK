@@ -43,7 +43,7 @@ This contains the Aries mobileagent iOS (AMA-i), an open source mobile agent for
   #   'AriesMobileAgent-iOS' => ['AriesMobileAgent-iOS/Assets/*.png']
       'AriesMobileAgent' => ['AriesMobileAgent-iOS/Classes/AriesMobileAgent.storyboard','AriesMobileAgent-iOS/Assets/AriesMobileAgent.xcassets']
    }
-#   s.static_framework = true
+   s.static_framework = true
    s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => ['i386','arm64'] }
 #   s.xcconfig     = {
 #       'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/OpenSSL-Universal/"',
