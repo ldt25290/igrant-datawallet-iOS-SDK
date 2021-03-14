@@ -101,13 +101,13 @@
 
   @param walletHandle  The wallet.
   @param myKey    id (verkey) of my key. The key must be created by calling createKey or createAndStoreMyDid
-  @param theirKey id (verkey) of their key
+  @param recipientKey id (verkey) of their key
   @param message a message to be decrypted
   Returns encrypted message as an array of bytes.
  */
 + (void)authCrypt:(NSData *)message
             myKey:(NSString *)myKey
-         theirKey:(NSString *)theirKey
+         recipientKey:(NSString *)recipientKey
      walletHandle:(IndyHandle)walletHandle
        completion:(void (^)(NSError *error, NSData *encryptedMsg))completion;
 
@@ -135,7 +135,7 @@
 + (void)authDecrypt:(NSData *)encryptedMessage
               myKey:(NSString *)myKey
        walletHandle:(IndyHandle)walletHandle
-         completion:(void (^)(NSError *error, NSString *theirKey, NSData *decryptedMessage))completion;
+         completion:(void (^)(NSError *error, NSString *recipientKey, NSData *decryptedMessage))completion;
 
 /**
   Encrypts a message by anonymous-encryption scheme.
@@ -149,12 +149,12 @@
 
   Note: use packMessage function for A2A goals.
 
-  @param theirKey verkey of message recipient
+  @param recipientKey verkey of message recipient
   @param message a message to be encrypted
   Returns encrypted message
  */
 + (void)anonCrypt:(NSData *)message
-         theirKey:(NSString *)theirKey
+         recipientKey:(NSString *)recipientKey
        completion:(void (^)(NSError *error, NSData *encryptedMsg))completion;
 
 /**

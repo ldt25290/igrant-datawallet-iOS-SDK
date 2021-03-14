@@ -89,7 +89,7 @@
 
 + (void)authCrypt:(NSData *)message
             myKey:(NSString *)myKey
-         theirKey:(NSString *)theirKey
+         recipientKey:(NSString *)recipientKey
      walletHandle:(IndyHandle)walletHandle
         completion:(void (^)(NSError *error, NSData *encyptedMsg))completion
 {
@@ -101,7 +101,7 @@
     indy_error_t ret = indy_crypto_auth_crypt(handle,
             walletHandle,
             [myKey UTF8String],
-            [theirKey UTF8String],
+            [recipientKey UTF8String],
             messageRaw,
             messageLen,
             IndyWrapperCommonDataCallback);
@@ -112,7 +112,7 @@
 + (void)authDecrypt:(NSData *)encryptedMessage
         myKey:(NSString *)myKey
         walletHandle:(IndyHandle)walletHandle
-           completion:(void (^)(NSError *error, NSString *theirKey, NSData *decryptedMessage))completion
+           completion:(void (^)(NSError *error, NSString *recipientKey, NSData *decryptedMessage))completion
 {
 
     indy_handle_t handle = [[IndyCallbacks sharedInstance] createCommandHandleFor:completion];
@@ -131,7 +131,7 @@
 }
 
 + (void)anonCrypt:(NSData *)message
-             theirKey:(NSString *)theirKey
+             recipientKey:(NSString *)recipientKey
            completion:(void (^)(NSError *error, NSData *encryptedMsg))completion
 {
     indy_handle_t handle = [[IndyCallbacks sharedInstance] createCommandHandleFor:completion];
@@ -140,7 +140,7 @@
     uint8_t *messageRaw = (uint8_t *) [message bytes];
 
     indy_error_t ret = indy_crypto_anon_crypt(handle,
-            [theirKey UTF8String],
+            [recipientKey UTF8String],
             messageRaw,
             messageLen,
             IndyWrapperCommonDataCallback);
