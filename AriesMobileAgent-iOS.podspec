@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 This contains the Aries mobileagent iOS (AMA-i), an open source mobile agent for achieving self sovereign identity (SSI), created as part NGI-Trust eSSIF Lab, with efforts from iGrant.io, unikk.me, MyData etc.
                        DESC
 
-  s.homepage         = 'https://github.com/rebink/datawallet_iOS_SDK.git'
+  s.homepage         = 'https://github.com/decentralised-dataexchange/igrant-datawallet-iOS-SDK.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'rebin@igrant.io' => 'rebin@igrant.io' }
-  s.source           = { :git => 'https://github.com/rebink/datawallet_iOS_SDK.git', :tag => s.version.to_s, }
+  s.source           = { :git => 'https://github.com/decentralised-dataexchange/igrant-datawallet-iOS-SDK.git', :tag => s.version.to_s, }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '13.0'
