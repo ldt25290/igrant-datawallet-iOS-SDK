@@ -1,0 +1,17 @@
+#use_frameworks!
+source 'https://github.com/hyperledger/indy-sdk.git'
+source 'https://github.com/CocoaPods/Specs.git'
+use_modular_headers!
+
+target 'AriesMobileAgent-iOS_Example' do
+  pod 'AriesMobileAgent-iOS', :path => '../'
+
+  target 'AriesMobileAgent-iOS_Tests' do
+#    inherit! :search_paths
+
+#    pod 'Quick', '~> 3.0.0'
+#    pod 'Nimble', '~> 9.0.0'
+#    pod 'iOSSnapshotTestCase'
+#    pod 'Nimble-Snapshots' , '~> 9.0.0'
+  end
+end
