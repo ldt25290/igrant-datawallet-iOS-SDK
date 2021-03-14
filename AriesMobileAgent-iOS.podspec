@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AriesMobileAgent-iOS'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'Aries mobileagent iOS (AMA-i).'
 
 # This description is used to generate tags and improve search results.
@@ -32,7 +32,7 @@ This contains the Aries mobileagent iOS (AMA-i), an open source mobile agent for
   s.source_files = ['AriesMobileAgent-iOS/Classes/**/*.{h,m,mm,a,hpp,cpp,swift,txn,storyboard}']
 
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
-  s.vendored_libraries = ['AriesMobileAgent-iOS/Classes/Indy/libindy/libindy.a','$(PODS_ROOT)/OpenSSL-Universal/**/*.a']
+#  s.vendored_libraries = ['AriesMobileAgent-iOS/Classes/Indy/libindy/libindy.a','$(PODS_ROOT)/OpenSSL-Universal/**/*.a']
   s.library = 'c++'
     s.xcconfig = {
          'CLANG_CXX_LANGUAGE_STANDARD' => 'c++11',
@@ -59,7 +59,7 @@ This contains the Aries mobileagent iOS (AMA-i), an open source mobile agent for
     s.dependency 'libsodium'
     s.dependency 'libzmq'
     s.dependency 'GRKOpenSSLFramework'
-    s.dependency 'CoreBitcoin'
+#    s.dependency 'CoreBitcoin'
 #    , :podspec => 'https://raw.github.com/oleganza/CoreBitcoin/master/CoreBitcoin.podspec'
     s.dependency 'IQKeyboardManagerSwift'
     s.dependency 'SwiftMessages'
