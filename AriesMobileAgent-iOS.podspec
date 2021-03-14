@@ -29,27 +29,38 @@ This contains the Aries mobileagent iOS (AMA-i), an open source mobile agent for
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '13.0'
-  s.source_files = ['AriesMobileAgent-iOS/Classes/**/*.{h,m,mm,swift,txn,storyboard}']
+  s.source_files = ['AriesMobileAgent-iOS/Classes/**/*.{h,m,mm,a,hpp,cpp,swift,txn,storyboard}']
+
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
+#  s.vendored_libraries = ['AriesMobileAgent-iOS/Classes/Indy/libindy/libindy.a','$(PODS_ROOT)/OpenSSL-Universal/**/*.a']
+  s.library = 'c++'
+    s.xcconfig = {
+         'CLANG_CXX_LANGUAGE_STANDARD' => 'c++11',
+         'CLANG_CXX_LIBRARY' => 'libc++'
+    }
 
    s.resource_bundles = {
   #   'AriesMobileAgent-iOS' => ['AriesMobileAgent-iOS/Assets/*.png']
       'AriesMobileAgent' => ['AriesMobileAgent-iOS/Classes/AriesMobileAgent.storyboard','AriesMobileAgent-iOS/Assets/AriesMobileAgent.xcassets']
    }
-   s.static_framework = true
+#   s.static_framework = true
+   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => ['i386','arm64'] }
+#   s.xcconfig     = {
+#       'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/OpenSSL-Universal/"',
+#     }
 #   s.preserve_paths = "AriesMobileAgent-iOS/Classes/AgentWrapper/Genesis"
 #   s.info_plist = { 'CFBundleIdentifier' => 'com.igrant.AriesMobileAgent' }
 #   s.pod_target_xcconfig = { 'PRODUCT_BUNDLE_IDENTIFIER': 'com.igrant.AriesMobileAgent' }
 #   s.resources = 'AriesMobileAgent-iOS/Classes/AgentWrapper/Genesis'
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+   s.public_header_files = 'AriesMobileAgent-iOS/Classes/**/*.h'
     s.frameworks = 'UIKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+#  # s.dependency 'AFNetworking', '~> 2.3'
     s.dependency 'libindy'
     s.dependency 'libsodium'
     s.dependency 'libzmq'
     s.dependency 'GRKOpenSSLFramework'
     s.dependency 'CoreBitcoin'
-# , :podspec => 'https://raw.github.com/oleganza/CoreBitcoin/master/CoreBitcoin.podspec'
+#    , :podspec => 'https://raw.github.com/oleganza/CoreBitcoin/master/CoreBitcoin.podspec'
     s.dependency 'IQKeyboardManagerSwift'
     s.dependency 'SwiftMessages'
     s.dependency 'Moya'
