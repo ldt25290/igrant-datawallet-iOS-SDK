@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AriesMobileAgent-iOS'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'Aries mobileagent iOS (AMA-i).'
 
 # This description is used to generate tags and improve search results.
@@ -36,7 +36,7 @@ This contains the Aries mobileagent iOS (AMA-i), an open source mobile agent for
   s.library = 'c++'
     s.xcconfig = {
          'CLANG_CXX_LANGUAGE_STANDARD' => 'c++11',
-         'CLANG_CXX_LIBRARY' => 'libc++'
+         'CLANG_CXX_LIBRARY' => 'libc++',
     }
 
    s.resource_bundles = {
@@ -44,7 +44,10 @@ This contains the Aries mobileagent iOS (AMA-i), an open source mobile agent for
       'AriesMobileAgent' => ['AriesMobileAgent-iOS/Classes/AriesMobileAgent.storyboard','AriesMobileAgent-iOS/Assets/AriesMobileAgent.xcassets']
    }
    s.static_framework = true
-   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => ['i386','arm64'] }
+   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => ['i386','arm64'],
+        "DEFINES_MODULE" => "YES"
+
+   }
 #   s.xcconfig     = {
 #       'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/OpenSSL-Universal/"',
 #     }
