@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AriesMobileAgent-iOS'
-  s.version          = '0.1.12'
+  s.version          = '0.1.13'
   s.summary          = 'Aries mobileagent iOS (AMA-i).'
 
 # This description is used to generate tags and improve search results.
@@ -48,14 +48,14 @@ This contains the Aries mobileagent iOS (AMA-i), an open source mobile agent for
 #   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => ['i386','arm64'],
 #        "DEFINES_MODULE" => "YES"
 #   }
-#   s.xcconfig     = {
-#       'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/OpenSSL-Universal/"',
-#     }
+   s.xcconfig     = {
+       'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}/libindy/"',
+     }
 #   s.preserve_paths = "AriesMobileAgent-iOS/Classes/AgentWrapper/Genesis"
 #   s.info_plist = { 'CFBundleIdentifier' => 'com.igrant.AriesMobileAgent' }
 #   s.pod_target_xcconfig = { 'PRODUCT_BUNDLE_IDENTIFIER': 'com.igrant.AriesMobileAgent' }
 #   s.resources = 'AriesMobileAgent-iOS/Classes/AgentWrapper/Genesis'
-   s.public_header_files = ['AriesMobileAgent-iOS/Classes/**/*.h', '${PODS_ROOT}/libindy/**/*.h']
+   s.public_header_files = ['AriesMobileAgent-iOS/Classes/**/*.h']
     s.frameworks = 'UIKit'
 #  # s.dependency 'AFNetworking', '~> 2.3'
     s.dependency 'libindy'
