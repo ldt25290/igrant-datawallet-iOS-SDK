@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AriesMobileAgent-iOS'
-  s.version          = '0.1.6'
+  s.version          = '0.1.7'
   s.summary          = 'Aries mobileagent iOS (AMA-i).'
 
 # This description is used to generate tags and improve search results.
@@ -27,7 +27,7 @@ This contains the Aries mobileagent iOS (AMA-i), an open source mobile agent for
   s.author           = { 'rebin@igrant.io' => 'rebin@igrant.io' }
   s.source           = { :git => 'https://github.com/decentralised-dataexchange/igrant-datawallet-iOS-SDK.git', :tag => s.version.to_s, }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-  s.swift.version = '5.0'
+  s.swift_version = '5.0'
   s.ios.deployment_target = '13.0'
   s.source_files = ['AriesMobileAgent-iOS/Classes/**/*.{h,m,mm,a,hpp,cpp,swift,txn,storyboard}']
 
