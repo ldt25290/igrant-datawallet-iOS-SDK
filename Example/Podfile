@@ -3,10 +3,10 @@ source 'https://github.com/hyperledger/indy-sdk.git'
 source 'https://github.com/CocoaPods/Specs.git'
 use_modular_headers!
 
-target 'AriesMobileAgent-iOS_Example' do
-  pod 'AriesMobileAgent-iOS', :path => '../'
+target 'igrant-datawallet_Example' do
+  pod 'igrant-datawallet', :path => '../'
 
-  target 'AriesMobileAgent-iOS_Tests' do
+  target 'igrant-datawallet_Tests' do
 #    inherit! :search_paths
 
 #    pod 'Quick', '~> 3.0.0'
