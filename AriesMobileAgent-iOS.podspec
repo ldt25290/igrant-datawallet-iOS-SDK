@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AriesMobileAgent-iOS'
-  s.version          = '0.1.21'
+  s.version          = '0.1.22'
   s.summary          = 'Aries mobileagent iOS (AMA-i).'
 
 # This description is used to generate tags and improve search results.
@@ -36,7 +36,7 @@ This contains the Aries mobileagent iOS (AMA-i), an open source mobile agent for
 #  s.vendored_libraries = ['AriesMobileAgent-iOS/Indy/OpenSSL-Universal/lib-ios/libcrypto.a','AriesMobileAgent-iOS/Indy/OpenSSL-Universal/lib-ios/libssl.a']
   s.library = ['c++','z']
     s.xcconfig = {
-         'CLANG_CXX_LANGUAGE_STANDARD' => ['c++11','gnu++14'],
+         'CLANG_CXX_LANGUAGE_STANDARD' => 'c++11',
          'CLANG_CXX_LIBRARY' => 'libc++',
          'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES'
     }
