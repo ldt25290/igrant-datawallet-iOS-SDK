@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AriesMobileAgent-iOS'
-  s.version          = '0.1.17'
+  s.version          = '0.1.18'
   s.summary          = 'Aries mobileagent iOS (AMA-i).'
 
 # This description is used to generate tags and improve search results.
@@ -30,13 +30,13 @@ This contains the Aries mobileagent iOS (AMA-i), an open source mobile agent for
   s.swift_version = '5.0'
   s.ios.deployment_target = '13.0'
   s.source_files = ['AriesMobileAgent-iOS/Classes/**/*.{h,m,mm,a,hpp,cpp,swift,txn,storyboard}']
-  s.exclude_files = [ 'AriesMobileAgent-iOS/Indy/OpenSSL-Universal/' ]
+#  s.exclude_files = [ 'AriesMobileAgent-iOS/Indy/OpenSSL-Universal/include-ios/**/*.h' ]
 
 #  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
-  s.vendored_libraries = ['AriesMobileAgent-iOS/Indy/OpenSSL-Universal/lib-ios/libcrypto.a','AriesMobileAgent-iOS/Indy/OpenSSL-Universal/lib-ios/libssl.a']
-  s.library = 'c++'
+#  s.vendored_libraries = ['AriesMobileAgent-iOS/Indy/OpenSSL-Universal/lib-ios/libcrypto.a','AriesMobileAgent-iOS/Indy/OpenSSL-Universal/lib-ios/libssl.a']
+  s.library = ['c++','z']
     s.xcconfig = {
-         'CLANG_CXX_LANGUAGE_STANDARD' => 'c++11',
+         'CLANG_CXX_LANGUAGE_STANDARD' => ['c++11','gnu++14'],
          'CLANG_CXX_LIBRARY' => 'libc++',
          'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES'
     }
@@ -64,7 +64,7 @@ This contains the Aries mobileagent iOS (AMA-i), an open source mobile agent for
     s.dependency 'libsodium'
     s.dependency 'libzmq'
     s.dependency 'GRKOpenSSLFramework'
-#    s.dependency 'CoreBitcoin'
+    s.dependency 'CoreBitcoin'
 #    , :podspec => 'https://raw.github.com/oleganza/CoreBitcoin/master/CoreBitcoin.podspec'
     s.dependency 'IQKeyboardManagerSwift'
     s.dependency 'SwiftMessages'
