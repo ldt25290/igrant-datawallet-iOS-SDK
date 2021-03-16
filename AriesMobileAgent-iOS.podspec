@@ -58,6 +58,8 @@ This contains the Aries mobileagent iOS (AMA-i), an open source mobile agent for
 #   s.public_header_files = ['AriesMobileAgent-iOS/Classes/**/*.h']
 #   s.static_framework = true
 
+#pod spec lint --sources='https://github.com/hyperledger/indy-sdk.git,https://github.com/CocoaPods/Specs.git'  --allow-warnings --verbose --skip-import-validation --use-libraries --use-modular-headers
+
     s.frameworks = 'UIKit'
 #  # s.dependency 'AFNetworking', '~> 2.3'
     s.dependency 'libindy'
