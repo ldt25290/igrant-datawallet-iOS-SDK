@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'AriesMobileAgent-iOS'
+  s.name             = 'igrant-datawallet'
   s.version          = '0.1.22'
   s.summary          = 'Aries mobileagent iOS (AMA-i).'
 
