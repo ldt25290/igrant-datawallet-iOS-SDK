@@ -15,7 +15,7 @@
     "ios": "10.0"
   },
   "source": {
-    "git": "https://github.com/CocoaPods/Specs.git"
+    "git": "https://github.com/decentralised-dataexchange/igrant-datawallet-iOS-SDK.git"
   },
   "source_files": "*.h",
   "vendored_libraries": "*.a",
