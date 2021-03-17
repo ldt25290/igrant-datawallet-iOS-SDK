@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'igrant-datawallet'
-  s.version          = '0.1.23'
+  s.version          = '0.1.26'
   s.summary          = 'Aries mobileagent iOS (AMA-i).'
 
 # This description is used to generate tags and improve search results.
