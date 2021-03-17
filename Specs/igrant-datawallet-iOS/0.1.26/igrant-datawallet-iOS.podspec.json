@@ -15,9 +15,9 @@
     "ios": "10.0"
   },
   "source": {
-    "git": "https://github.com/decentralised-dataexchange/igrant-datawallet-iOS-SDK.git"
+    "git": "https://github.com/decentralised-dataexchange/igrant-datawallet-iOS-SDK"
   },
   "source_files": "*.h",
   "vendored_libraries": "*.a",
-  "requires_arc": false,
+  "requires_arc": false
 }
