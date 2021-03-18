@@ -60,21 +60,8 @@ This contains the Aries mobileagent iOS (AMA-i), an open source mobile agent for
 
 #pod spec lint --sources='https://github.com/hyperledger/indy-sdk.git,https://github.com/CocoaPods/Specs.git'  --allow-warnings --verbose --skip-import-validation --use-libraries --use-modular-headers
 
-    s.frameworks = 'UIKit'
-#  # s.dependency 'AFNetworking', '~> 2.3'
-#    s.dependency 'libindy'
-    s.dependency 'libsodium'
+    s.dependency 'libindy'
+    s.dependency 'igrant-libzmq-support'
     s.dependency 'libzmq'
-    s.dependency 'GRKOpenSSLFramework'
-    s.dependency 'CoreBitcoin'
-#    , :podspec => 'https://raw.github.com/oleganza/CoreBitcoin/master/CoreBitcoin.podspec'
-    s.dependency 'IQKeyboardManagerSwift'
-    s.dependency 'SwiftMessages'
-    s.dependency 'Moya'
-    s.dependency 'SVProgressHUD'
-    s.dependency 'Kingfisher'
-    s.dependency 'loady'
-    s.dependency 'Localize-Swift'
-    s.dependency 'ReachabilitySwift'
-    s.dependency 'igrant-indySDK-support'
+   
 end
