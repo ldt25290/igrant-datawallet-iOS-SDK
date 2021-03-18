@@ -5,8 +5,7 @@ source 'https://github.com/decentralised-dataexchange/igrant-datawallet-iOS-SDK.
 use_modular_headers!
 
 target 'igrant-datawallet_Example' do
-  pod 'igrant-datawallet-iOS'
-#  , :path => '../'
+  pod 'igrant-datawallet', :path => '../'
 #  pod 'libzmq'
 
   target 'igrant-datawallet_Tests' do

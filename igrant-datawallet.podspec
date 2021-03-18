@@ -62,7 +62,7 @@ This contains the Aries mobileagent iOS (AMA-i), an open source mobile agent for
 
     s.frameworks = 'UIKit'
 #  # s.dependency 'AFNetworking', '~> 2.3'
-    s.dependency 'libindy'
+#    s.dependency 'libindy'
     s.dependency 'libsodium'
     s.dependency 'libzmq'
     s.dependency 'GRKOpenSSLFramework'
@@ -76,4 +76,5 @@ This contains the Aries mobileagent iOS (AMA-i), an open source mobile agent for
     s.dependency 'loady'
     s.dependency 'Localize-Swift'
     s.dependency 'ReachabilitySwift'
+    s.dependency 'igrant-indySDK-support'
 end
