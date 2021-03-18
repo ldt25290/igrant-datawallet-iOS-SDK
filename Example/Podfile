@@ -1,14 +1,16 @@
 #use_frameworks!
-source 'https://github.com/hyperledger/indy-sdk.git'
-source 'https://github.com/CocoaPods/Specs.git'
+#source 'https://github.com/hyperledger/indy-sdk.git'
+#source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/decentralised-dataexchange/igrant-datawallet-iOS-SDK.git'
 use_modular_headers!
 
 target 'igrant-datawallet_Example' do
-  pod 'igrant-datawallet', :path => '../'
+  pod 'igrant-datawallet-iOS'
+#  , :path => '../'
+#  pod 'libzmq'
 
   target 'igrant-datawallet_Tests' do
 #    inherit! :search_paths
-
 #    pod 'Quick', '~> 3.0.0'
 #    pod 'Nimble', '~> 9.0.0'
 #    pod 'iOSSnapshotTestCase'
